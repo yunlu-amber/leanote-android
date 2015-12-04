@@ -110,8 +110,8 @@
         </service>
 
         <activity
-            android:theme="@style/BlogHomeView"
-            android:name=".ui.post.BlogHomeActivity" >
+            android:name=".ui.post.BlogHomeActivity"
+            android:theme="@style/LeanoteNoActionBarTheme">
         </activity>
     </application>
 

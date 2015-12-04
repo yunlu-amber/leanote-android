@@ -341,13 +341,13 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="BlogHomeView" parent="Theme.AppCompat.Light.NoActionBar">
+
+    <style name="LeanoteNoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryDark">@color/color_primary_dark</item>
         <item name="colorAccent">@color/color_accent</item>
         <item name="colorControlActivated">@color/color_control_activated</item>
         <item name="colorControlHighlight">@color/color_control_highlight</item>
-
         <item name="android:windowBackground">@color/grey_lighten_30</item>
         <item name="android:actionBarItemBackground">@drawable/selectable_background_leanote</item>
         <item name="android:popupMenuStyle">@style/PopupMenu.Leanote</item>
@@ -359,6 +359,5 @@
         <item name="android:actionBarTabBarStyle">@style/TabBarStyle.Leanote</item>
         <item name="windowActionModeOverlay">true</item>
     </style>
-
 
 </resources>

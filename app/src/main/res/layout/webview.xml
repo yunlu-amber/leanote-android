@@ -4,16 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <include
         layout="@layout/toolbar"
         android:id="@+id/toolbar" />
-
-
-        <!--<FrameLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="vertical"-->
-            <!--android:gravity="top">-->
 
             <com.leanote.android.ui.ObservableWebView
                 android:id="@+id/webView"
@@ -30,6 +24,5 @@
                 android:indeterminate="false"
                 android:layout_alignTop="@+id/webView"
                 android:progressDrawable="@drawable/progressbar_horizontal" />
-        <!--</FrameLayout>-->
 
 </FrameLayout>

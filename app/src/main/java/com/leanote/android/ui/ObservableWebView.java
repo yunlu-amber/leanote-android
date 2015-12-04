@@ -2,6 +2,7 @@ package com.leanote.android.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;
+
 import android.util.Log;
 import android.webkit.WebView;
 
@@ -16,6 +17,7 @@ public class ObservableWebView extends WebView {
         super(context);
     }
 
+
     public ObservableWebView(final Context context, final AttributeSet attrs) {
         super(context, attrs);
     }
@@ -25,10 +27,12 @@ public class ObservableWebView extends WebView {
         super(context, attrs, defStyle);
     }
 
+
     @Override
     protected void onScrollChanged(final int l, final int t, final int oldl,
                                    final int oldt) {
         super.onScrollChanged(l, t, oldl, oldt);
+
 
         float webcontent = getContentHeight() * (getResources().getDisplayMetrics().density);// webview的高度
         float webnow = getHeight() + getScrollY();// 当前webview的高度
@@ -47,6 +51,7 @@ public class ObservableWebView extends WebView {
             else {
                 mOnScrollChangedCallback.onScroll(l - oldl, t - oldt);
             }
+
         }
     }
 
@@ -66,5 +71,6 @@ public class ObservableWebView extends WebView {
         public void onScroll(int dx, int dy);
         public void onPageEnd(int l, int t, int oldl, int oldt);
         public void onPageTop(int l, int t, int oldl, int oldt);
+
     }
 }

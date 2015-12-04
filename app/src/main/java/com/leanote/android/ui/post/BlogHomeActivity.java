@@ -16,6 +16,7 @@ import com.leanote.android.ui.ObservableWebView;
 import com.leanote.android.ui.WebViewActivity;
 
 
+
 public class BlogHomeActivity extends WebViewActivity {
     private String username;
     private FrameLayout webview_wrapper ;
@@ -35,12 +36,14 @@ public class BlogHomeActivity extends WebViewActivity {
 
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // note: do NOT call mWebView.getSettings().setUserAgentString(WordPress.getUserAgent())
         // here since it causes problems with the browser-sniffing that some sites rely on to
         // format the page for mobile display
+
         mWebView = (WebView) this.findViewById(R.id.webView);
         mWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
 
@@ -167,3 +170,4 @@ public class BlogHomeActivity extends WebViewActivity {
         isTopHide = true;
     }
 }
+
