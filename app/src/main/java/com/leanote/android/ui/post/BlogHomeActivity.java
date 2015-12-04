@@ -23,6 +23,7 @@ public class BlogHomeActivity extends WebViewActivity {
     private Toolbar toolbar ;
     private Boolean hasMeasured = false;
     private Boolean isTopHide = false;
+    private Boolean isTop = true;
     static long TIME_ANIMATION =1000;
     static String Url ;
 
