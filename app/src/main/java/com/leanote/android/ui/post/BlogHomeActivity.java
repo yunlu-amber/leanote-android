@@ -24,7 +24,7 @@ public class BlogHomeActivity extends WebViewActivity {
     private Boolean hasMeasured = false;
     private Boolean isTopHide = false;
     private Boolean isTop = true;
-    static long TIME_ANIMATION =1000;
+    static long TIME_ANIMATION =600;
     static String Url ;
 
 
@@ -109,7 +109,7 @@ public class BlogHomeActivity extends WebViewActivity {
 
         ObjectAnimator anim1 = ObjectAnimator.ofFloat(toolbar, "y", toolbar.getY(),
                 0);
-        anim1.setDuration(TIME_ANIMATION-200);
+        anim1.setDuration(TIME_ANIMATION);
         anim1.start();
 //
 //
@@ -146,7 +146,7 @@ public class BlogHomeActivity extends WebViewActivity {
 
         ObjectAnimator anim1 = ObjectAnimator.ofFloat(toolbar, "y", 0,
                 -toolbar.getHeight());
-        anim1.setDuration(TIME_ANIMATION+200);
+        anim1.setDuration(TIME_ANIMATION);
         anim1.start();
 //
 //        Log.i(this.getClass().getSimpleName(), "para " + mWebView.getY() + " " + webview_wrapper.getY());
