@@ -14,13 +14,13 @@ import android.webkit.WebView;
 
 import com.leanote.android.R;
 
-public abstract class WebViewActivity extends AppCompatActivity {
+public abstract class WebViewActivity extends AppCompatActivity{
     /** Primary webview used to display content. */
 
     private static final String URL = "url";
 
-    protected WebView mWebView;
-    //protected ObservableWebView mWebView;
+    public WebView mWebView;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         supportRequestWindowFeature(Window.FEATURE_PROGRESS);
@@ -45,17 +45,7 @@ public abstract class WebViewActivity extends AppCompatActivity {
         mWebView = (WebView) findViewById(R.id.webView);
         mWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
 
-        //mWebView = (ObservableWebView) findViewById(R.id.webView);
-        //mWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
 
-//        mWebView.setOnScrollChangedCallback(new ObservableWebView.OnScrollChangedCallback() {
-//            public void onScroll(int dx, int dy) {
-//                //这里我们根据dx和dy参数做自己想做的事情
-//                Log.i("dxdy","dx: "+ dx + "dy: " + dy);
-//            }
-//        });
-
-        // load URL if one was provided in the intent
         String url = getIntent().getStringExtra(URL);
         if (url != null) {
             loadUrl(url);

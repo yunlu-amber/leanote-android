@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -16,7 +17,6 @@ import com.leanote.android.R;
 import com.leanote.android.model.AccountHelper;
 import com.leanote.android.ui.ObservableWebView;
 import com.leanote.android.ui.WebViewActivity;
-
 
 public class BlogHomeActivity extends WebViewActivity {
     String userid;
@@ -35,15 +35,11 @@ public class BlogHomeActivity extends WebViewActivity {
         // note: do NOT call mWebView.getSettings().setUserAgentString(WordPress.getUserAgent())
         // here since it causes problems with the browser-sniffing that some sites rely on to
         // format the page for mobile display
+
         mWebView = (WebView) findViewById(R.id.webView);
         mWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
 
-//        mWebView.setOnScrollChangedCallback(new ObservableWebView.OnScrollChangedCallback() {
-//            public void onScroll(int dx, int dy) {
-//                //这里我们根据dx和dy参数做自己想做的事情
-//                Log.i("dxdy", "dx: " + dx + "dy: " + dy);
-//            }
-//        });
+        mWebView.setScrollX();
 
         // load URL if one was provided in the intent
         userid=AccountHelper.getDefaultAccount().getmUserName();
@@ -52,6 +48,8 @@ public class BlogHomeActivity extends WebViewActivity {
             loadUrl(url);
         }
     }
+
+
 }
 
 
